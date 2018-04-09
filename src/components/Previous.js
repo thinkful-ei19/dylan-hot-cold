@@ -1,9 +1,11 @@
 import React from 'react';
 
+import './Previous.css';
+
 const Previous = (props) => {
 
-  const previousGuesses = props.previousGuesses.map(guess => {
-    return <li className="previous__guess">{guess}</li>;
+  const previousGuesses = props.previousGuesses.map((guess, index) => {
+    return <li key={index} className="previous__guess">{guess}</li>;
   });
 
   return (
